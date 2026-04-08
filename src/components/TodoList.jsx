@@ -8,7 +8,12 @@ function TodoList({ sectionTitle, todos }) {
       </div>
       <ul className="todo-list">
         {todos.map((todo) => (
-          <TodoItem key={todo.id} text={todo.text}></TodoItem>
+          <TodoItem
+            key={todo.id}
+            text={todo.text}
+            priority={todo.priority}
+            createdAt={todo.createdAt}
+          ></TodoItem>
         ))}
       </ul>
     </section>
