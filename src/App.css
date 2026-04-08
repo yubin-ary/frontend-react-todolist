@@ -1,0 +1,236 @@
+.spring-scene {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.petal-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  top: -12%;
+  left: var(--petal-left);
+  width: var(--petal-size);
+  height: calc(var(--petal-size) * 1.35);
+  border-radius: 65% 35% 70% 30% / 55% 45% 55% 45%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), transparent 38%),
+    linear-gradient(180deg, rgba(255, 244, 199, 0.95), rgba(255, 205, 149, 0.85));
+  opacity: 0.68;
+  filter: blur(0.2px);
+  box-shadow: 0 8px 18px rgba(230, 177, 111, 0.16);
+  animation: petal-fall var(--petal-duration) linear infinite;
+  animation-delay: var(--petal-delay);
+}
+
+.petal:nth-child(odd) {
+  border-radius: 40% 60% 44% 56% / 60% 34% 66% 40%;
+  opacity: 0.56;
+}
+
+.petal:nth-child(3n) {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.86), transparent 38%),
+    linear-gradient(180deg, rgba(255, 238, 187, 0.92), rgba(255, 189, 120, 0.8));
+}
+
+.app-shell {
+  width: min(100%, 760px);
+  padding: 36px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 251, 236, 0.88)),
+    var(--surface);
+  backdrop-filter: blur(28px) saturate(140%);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.app-shell::before,
+.app-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.app-shell::before {
+  width: 240px;
+  height: 240px;
+  top: -90px;
+  right: -70px;
+  background: radial-gradient(circle, rgba(255, 230, 129, 0.58), transparent 68%);
+}
+
+.app-shell::after {
+  width: 220px;
+  height: 220px;
+  bottom: -120px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(255, 244, 199, 0.9), transparent 70%);
+}
+
+.todo-header {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.todo-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.todo-header__description {
+  margin-top: 16px;
+  max-width: 36rem;
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.todo-panel {
+  position: relative;
+  z-index: 1;
+  padding: 26px;
+  border-radius: 32px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 16px 28px rgba(214, 180, 94, 0.12);
+}
+
+.todo-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.todo-panel__count {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--social-bg);
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(235, 213, 148, 0.35);
+  box-shadow: 0 10px 18px rgba(214, 180, 94, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 24px rgba(214, 180, 94, 0.14);
+}
+
+.todo-item__check {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #fff9dc 0%, #ffe18c 72%, #f2ba3b 100%);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.85),
+    0 6px 12px rgba(223, 157, 20, 0.18);
+}
+
+.todo-item__text {
+  color: var(--text-h);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .petal {
+    opacity: 0.4;
+  }
+
+  .app-shell {
+    padding: 24px 18px;
+    border-radius: 28px;
+  }
+
+  .todo-panel {
+    padding: 20px 16px;
+    border-radius: 24px;
+  }
+
+  .todo-panel__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .todo-item {
+    padding: 16px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(calc(var(--petal-drift) * 0.8), 28vh, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate3d(calc(var(--petal-drift) * -1), 56vh, 0) rotate(180deg);
+  }
+
+  75% {
+    transform: translate3d(calc(var(--petal-drift) * 0.7), 82vh, 0) rotate(260deg);
+  }
+
+  100% {
+    transform: translate3d(calc(var(--petal-drift) * -0.6), 115vh, 0) rotate(360deg);
+  }
+}
