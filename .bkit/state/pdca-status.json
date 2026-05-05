@@ -1,0 +1,165 @@
+{
+  "version": "3.0",
+  "lastUpdated": "2026-05-05T09:41:42.101Z",
+  "activeFeatures": [
+    "TodoList"
+  ],
+  "primaryFeature": "TodoList",
+  "features": {
+    "TodoList": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-05T04:51:33.092Z",
+        "lastUpdated": "2026-05-05T09:41:42.098Z"
+      },
+      "lastFile": "/Users/yv073/멋쟁이사자처럼/5주차/TodoList/src/components/TodoItem.jsx"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-05-05T04:50:55.180Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-05-05T09:41:42.101Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-05-05T04:51:33.094Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T04:53:54.077Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T04:54:37.798Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T04:58:58.694Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T08:55:34.498Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T08:55:52.619Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T08:56:26.118Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:19:45.900Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:22:46.464Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:27:01.812Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:27:22.970Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:31:03.201Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:31:11.144Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:31:12.761Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:32:48.619Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:32:53.935Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:34:58.318Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:41:32.134Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-05T09:41:42.100Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    }
+  ],
+  "stateMachine": {
+    "defaultWorkflow": "default",
+    "activeWorkflows": {},
+    "totalTransitions": 0
+  },
+  "automation": {
+    "globalLevel": 2,
+    "trustScore": 40,
+    "pendingApprovals": 0,
+    "lastGateResult": null
+  },
+  "team": {
+    "enabled": true,
+    "stateFile": ".bkit/runtime/agent-state.json",
+    "eventsFile": ".bkit/runtime/agent-events.jsonl"
+  }
+}

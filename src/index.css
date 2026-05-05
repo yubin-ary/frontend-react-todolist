@@ -1,92 +1,64 @@
 :root {
-  --text: #6f6857;
-  --text-h: #3e3521;
-  --bg: #fffdf4;
-  --bg-soft: rgba(255, 248, 214, 0.7);
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: rgba(255, 252, 235, 0.94);
-  --border: rgba(233, 205, 123, 0.36);
-  --code-bg: #f7efd3;
-  --accent: #f2ba3b;
-  --accent-strong: #df9d14;
-  --accent-bg: rgba(242, 186, 59, 0.14);
-  --accent-border: rgba(223, 157, 20, 0.34);
-  --social-bg: rgba(255, 249, 229, 0.76);
-  --shadow:
-    0 24px 60px rgba(226, 191, 103, 0.18),
-    0 10px 24px rgba(164, 132, 54, 0.1);
+  --text: rgba(230, 210, 190, 0.75);
+  --text-h: #f5e0c8;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.06);
+  --border: rgba(200, 80, 30, 0.28);
+  --accent: #c2410c;
+  --accent-strong: #fb923c;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 8px 20px rgba(180, 60, 10, 0.18);
 
-  --sans:
-    "SF Pro Display", "SF Pro KR", "Apple SD Gothic Neo", "Pretendard",
-    sans-serif;
-  --heading:
-    "SF Pro Display", "SF Pro KR", "Apple SD Gothic Neo", "Pretendard",
-    sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: "SF Pro Display", "Apple SD Gothic Neo", "Pretendard", sans-serif;
+  --heading: var(--sans);
 
-  font: 18px/145% var(--sans);
+  font: 17px/1.6 var(--sans);
   letter-spacing: -0.01em;
   color: var(--text);
-  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(255, 244, 178, 0.9), transparent 30%),
-    radial-gradient(circle at top right, rgba(255, 236, 158, 0.6), transparent 26%),
-    linear-gradient(180deg, #fffef8 0%, #fff7d8 52%, #fffbed 100%);
-}
-
-#root {
-  width: min(100%, 980px);
-  margin: 0 auto;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 40px 24px;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 600;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: clamp(3rem, 7vw, 4.75rem);
-  line-height: 0.98;
-  letter-spacing: -0.06em;
-  margin: 0;
-  @media (max-width: 1024px) {
-    font-size: 3rem;
-  }
-}
-h2 {
-  font-size: 1.4rem;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin: 0;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
 }
 
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f0500;
+}
+
+#root {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  background: linear-gradient(135deg, #ef4444, #f97316 50%, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+p { margin: 0; }

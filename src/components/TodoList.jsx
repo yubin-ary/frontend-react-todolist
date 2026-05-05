@@ -1,18 +1,43 @@
 import TodoItem from "./TodoItem";
-function TodoList({ sectionTitle, todos }) {
+import FilterBar from "./FilterBar";
+import { useState } from "react";
+function TodoList({ todos, setTodos }) {
+  const [filter, setFilter] = useState("all");
+  const handleToggle = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  };
+
+  const PRIORITY_ORDER = { high: 0, med: 1, low: 2 };
+
+  const filteredTodos = todos
+    .filter((todo) => {
+      if (filter === "completed") return todo.done;
+      if (filter === "incompleted") return !todo.done;
+      return true;
+    })
+    .sort(
+      (a, b) =>
+        (PRIORITY_ORDER[a.priority] ?? 3) - (PRIORITY_ORDER[b.priority] ?? 3)
+    );
+
   return (
     <section className="todo-panel">
       <div className="todo-panel__header">
-        <h2>{sectionTitle}</h2>
-        <span className="todo-panel__count">{todos.length} items</span>
+        <FilterBar setFilter={setFilter}></FilterBar>
+        <span className="todo-panel__count">{filteredTodos.length} items</span>
       </div>
       <ul className="todo-list">
-        {todos.map((todo) => (
+        {filteredTodos.map((todo) => (
           <TodoItem
             key={todo.id}
-            text={todo.text}
+            content={todo.content}
             priority={todo.priority}
-            createdAt={todo.createdAt}
+            done={todo.done}
+            onToggle={() => handleToggle(todo.id)}
           ></TodoItem>
         ))}
       </ul>
