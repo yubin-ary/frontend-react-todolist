@@ -58,13 +58,12 @@
   font-size: 0.9rem;
   background: linear-gradient(135deg, #dc2626, #ea580c);
   color: #fff;
-  box-shadow: 0 0 18px rgba(220, 38, 38, 0.4);
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s, opacity 0.15s;
 }
 
 .input-bar button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 26px rgba(220, 38, 38, 0.6);
+  opacity: 0.9;
 }
 
 /* ── Panel ── */
@@ -149,7 +148,6 @@
   flex: 0 0 18px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #a855f7, #2563eb);
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
 }
 
 .todo-item__body {
@@ -206,7 +204,6 @@
 
 .todo-checkbox--checked {
   background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 8px currentColor;
 }
 
 .todo-item button:hover {
