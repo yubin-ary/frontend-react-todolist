@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "lastUpdated": "2026-05-05T09:41:42.101Z",
+  "lastUpdated": "2026-05-10T13:00:39.311Z",
   "activeFeatures": [
     "TodoList"
   ],
@@ -15,9 +15,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-05T04:51:33.092Z",
-        "lastUpdated": "2026-05-05T09:41:42.098Z"
+        "lastUpdated": "2026-05-10T13:00:39.310Z"
       },
-      "lastFile": "/Users/yv073/멋쟁이사자처럼/5주차/TodoList/src/components/TodoItem.jsx"
+      "lastFile": "/Users/yv073/멋쟁이사자처럼/5주차/TodoList/src/App.jsx"
     }
   },
   "pipeline": {
@@ -28,7 +28,7 @@
   "session": {
     "startedAt": "2026-05-05T04:50:55.180Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-05-05T09:41:42.101Z"
+    "lastActivity": "2026-05-10T13:00:39.311Z"
   },
   "history": [
     {
@@ -141,6 +141,18 @@
     },
     {
       "timestamp": "2026-05-05T09:41:42.100Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-10T13:00:28.048Z",
+      "feature": "TodoList",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-10T13:00:39.311Z",
       "feature": "TodoList",
       "phase": "do",
       "action": "updated"

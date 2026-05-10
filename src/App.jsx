@@ -2,7 +2,6 @@ import "./App.css";
 import TodoHeader from "./components/TodoHeader";
 import TodoInputBar from "./components/TodoInputBar";
 import TodoList from "./components/TodoList";
-import ParticleBackground from "./components/ParticleBackground";
 import { useState } from "react";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <>
-      <ParticleBackground />
       <main className="app-shell">
         <TodoHeader title="Todo List" />
         <TodoInputBar todos={todos} setTodos={setTodos} />
