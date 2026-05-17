@@ -2,7 +2,7 @@ import "./App.css";
 import TodoHeader from "./components/TodoHeader";
 import TodoInputBar from "./components/TodoInputBar";
 import TodoList from "./components/TodoList";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const DEFAULT_TODOS = [
   { id: 1, content: "은수 만나기", priority: "med", done: false },
@@ -24,8 +24,20 @@ function App() {
       return DEFAULT_TODOS;
     }
   });
+  const renderCountRef = useRef(0);
+
+  renderCountRef.current += 1;
+  console.log("[App render]", {
+    renderCount: renderCountRef.current,
+    todosLength: todos.length,
+  });
 
   useEffect(() => {
+    console.log("[localStorage save effect] todos changed", {
+      renderCount: renderCountRef.current,
+      todosLength: todos.length,
+      todos,
+    });
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 

@@ -4,6 +4,13 @@ function TodoInputBar({ todos, setTodos }) {
   const [content, setContent] = useState("");
   const [priority, setPriority] = useState("");
   const inputRef = useRef(null);
+
+  console.log("[TodoInputBar render]", {
+    content,
+    priority,
+    todosLength: todos.length,
+  });
+
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
