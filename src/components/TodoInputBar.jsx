@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function TodoInputBar({ todos, setTodos }) {
   const [content, setContent] = useState("");
   const [priority, setPriority] = useState("");
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
@@ -25,6 +29,7 @@ function TodoInputBar({ todos, setTodos }) {
   return (
     <div className="input-bar">
       <input
+        ref={inputRef}
         value={content}
         onChange={handleContentChange}
         type="text"

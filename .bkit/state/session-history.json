@@ -6,5 +6,29 @@
     "feature": null,
     "phase": null,
     "progress": null
+  },
+  {
+    "sessionId": "4a422cc8-0ba6-47ca-be3a-63f80d8256ff",
+    "reason": "other",
+    "endedAt": "2026-05-10T13:09:35.335Z",
+    "feature": null,
+    "phase": null,
+    "progress": null
+  },
+  {
+    "sessionId": "dd310fcf-72d4-41f1-9433-20346898a337",
+    "reason": "other",
+    "endedAt": "2026-05-17T07:10:59.032Z",
+    "feature": null,
+    "phase": null,
+    "progress": null
+  },
+  {
+    "sessionId": "4a422cc8-0ba6-47ca-be3a-63f80d8256ff",
+    "reason": "other",
+    "endedAt": "2026-05-17T07:11:05.440Z",
+    "feature": null,
+    "phase": null,
+    "progress": null
   }
 ]
