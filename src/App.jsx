@@ -2,7 +2,10 @@ import "./App.css";
 import TodoHeader from "./components/TodoHeader";
 import TodoInputBar from "./components/TodoInputBar";
 import TodoList from "./components/TodoList";
+import Navigation from "./components/Navigation";
+import ApiPage from "./pages/ApiPage";
 import { useEffect, useRef, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 const DEFAULT_TODOS = [
   { id: 1, content: "은수 만나기", priority: "med", done: false },
@@ -25,6 +28,8 @@ function App() {
     }
   });
   const renderCountRef = useRef(0);
+  const activeTodos = todos.filter((todo) => !todo.done);
+  const doneTodos = todos.filter((todo) => todo.done);
 
   renderCountRef.current += 1;
   console.log("[App render]", {
@@ -44,9 +49,24 @@ function App() {
   return (
     <>
       <main className="app-shell">
-        <TodoHeader title="Todo List" />
+        <TodoHeader title="Todo List"></TodoHeader>
+        <Navigation></Navigation>
         <TodoInputBar todos={todos} setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos} />
+        <Routes>
+          <Route
+            path="/"
+            element={<TodoList todos={todos} setTodos={setTodos}></TodoList>}
+          ></Route>
+          <Route
+            path="/active"
+            element={<TodoList todos={activeTodos}></TodoList>}
+          ></Route>
+          <Route
+            path="/done"
+            element={<TodoList todos={doneTodos}></TodoList>}
+          ></Route>
+          <Route path="/api" element={<ApiPage></ApiPage>}></Route>
+        </Routes>
       </main>
     </>
   );

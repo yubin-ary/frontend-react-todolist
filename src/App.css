@@ -10,6 +10,43 @@
   box-shadow: var(--shadow);
 }
 
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+
+.page-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.page-nav__link:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-strong);
+  background: rgba(251, 146, 60, 0.12);
+  color: var(--text-h);
+}
+
+.page-nav__link--active {
+  border-color: rgba(251, 146, 60, 0.65);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.24), rgba(234, 88, 12, 0.28));
+  color: #fff3e8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
 /* ── Input bar ── */
 .input-bar {
   display: flex;
@@ -215,6 +252,9 @@
 @media (max-width: 600px) {
   .app-shell {
     padding: 20px 16px;
+  }
+  .page-nav {
+    margin-bottom: 18px;
   }
   .input-bar {
     flex-wrap: wrap;
